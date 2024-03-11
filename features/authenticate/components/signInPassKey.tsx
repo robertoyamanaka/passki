@@ -25,7 +25,7 @@ export default function SignInPassKey() {
         ticket: signInToken as string,
       });
       console.log("auth response", res);
-      setActive({
+      await setActive({
         session: res.createdSessionId,
       });
     } catch (error: unknown) {
